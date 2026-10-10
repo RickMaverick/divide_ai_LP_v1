@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+/* ── DivideAi design system tokens (design/divideae-design-system-…/tokens) ── */
+
+/* Cores — src/theme/tokens.ts (Cores.pdf) */
+:root {
+  /* Brand — iguais nos dois temas */
+  --brand-primary: #b275ff;
+  --brand-primary-hover: #8536e7;
+  --brand-success: #72e37d;
+  --brand-warning: #eab308;
+  --brand-error: #d41976;
+  --brand-info: #0ea5e9;
+  --brand-deep-blue: #0a1e5f;
+  /* Tema claro */
+  --bg: #ffffff;
+  --surface: #f8f7fb;
+  --text: #16131f;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --primary-text: #8536e7;
+  --success-text: #0f7a37;
+  --warning-text: #8a6100;
+  --error-text: #d41976;
+  --info-text: #0369a1;
+  /* Fills — rótulo branco sobre a cor */
+  --fill-primary: #8536e7;
+  --fill-destructive: #d41976;
+  --on-fill: #ffffff;
+  --badge-bg: var(--brand-error);
+  /* Tinted fills: 10% bg / 30% borda */
+  --tint-success-bg: rgb(114 227 125 / 10%);
+  --tint-success-border: rgb(114 227 125 / 30%);
+  --tint-error-bg: rgb(212 25 118 / 10%);
+  --tint-error-border: rgb(212 25 118 / 30%);
+  --tint-warning-bg: rgb(234 179 8 / 10%);
+  --tint-warning-border: rgb(234 179 8 / 30%);
+  --tint-info-bg: rgb(14 165 233 / 10%);
+  --tint-info-border: rgb(14 165 233 / 30%);
+  --surface-warm: #faf8f5;
+  --backdrop: rgb(0 0 0 / 50%);
+  /* Paleta do colorForName */
+  --avatar-0: #b275ff;
+  --avatar-1: #0ea5e9;
+  --avatar-2: #72e37d;
+  --avatar-3: #eab308;
+  --avatar-4: #d41976;
+  --avatar-5: #0a1e5f;
+
+  /* Tipografia — fonte do aparelho, sem webfont */
+  --font-sans: -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --fs-xs: 12px;
+  --fs-sm: 14px;
+  --fs-base: 16px;
+  --fs-lg: 18px;
+  --fs-xl: 20px;
+  --fs-2xl: 24px;
+  --fs-3xl: 30px;
+  --fs-4xl: 36px;
+  --fs-5xl: 48px;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --type-greeting: var(--fw-bold) var(--fs-xl) / 1.3 var(--font-sans);
+  --type-section: var(--fw-bold) var(--fs-lg) / 1.35 var(--font-sans);
+
+  /* Espaçamento, raios, sombras */
+  --min-touch: 44px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --disabled-opacity: 0.6;
+}
+
+[data-theme="dark"] {
+  --bg: #0b0f1a;
+  --surface: #141a2e;
+  --text: #f5f5f7;
+  --muted: #9aa0ac;
+  --border: #262c3d;
+  --primary-text: #b275ff;
+  --success-text: #72e37d;
+  --warning-text: #eab308;
+  --error-text: #f472b6;
+  --info-text: #0ea5e9;
+}
+
+/* Tokens expostos como utilitários Tailwind: bg-surface, text-muted, border-border, bg-deep-blue… */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary-text: var(--primary-text);
+  --color-success-text: var(--success-text);
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-primary-hover: var(--brand-primary-hover);
+  --color-deep-blue: var(--brand-deep-blue);
+  --color-fill-primary: var(--fill-primary);
+  --color-on-fill: var(--on-fill);
+  --color-tint-info-bg: var(--tint-info-bg);
+  --color-tint-info-border: var(--tint-info-border);
+  --color-hero-body: #d6dbf0;
+  --color-hero-muted: #aab3d6;
+  --radius-card: var(--radius-lg);
+  --shadow-card: var(--shadow-sm);
+  --shadow-card-md: var(--shadow-md);
+}
+
+/* ── Base (em @layer base para que as utilities do Tailwind possam sobrescrever) ── */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--primary-text);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--brand-primary-hover);
+  }
+}
+
+/* ── Animações ── */
+@keyframes dvae-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes daiTwinkle {
+  0%,
+  100% {
+    opacity: 0.15;
+    transform: scale(0.7);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .dai-anim {
+    animation: none !important;
+  }
+}

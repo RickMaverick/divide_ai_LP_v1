@@ -1,0 +1,29 @@
+/* DivideAi colors — source: src/theme/tokens.ts (Cores.pdf) */
+:root{
+/* Brand — identical in both themes. Paint areas & decoration. */
+--brand-primary:#b275ff;--brand-primary-hover:#8536e7;--brand-success:#72e37d;--brand-warning:#eab308;--brand-error:#d41976;--brand-info:#0ea5e9;--brand-deep-blue:#0a1e5f;
+/* Light theme (lightTheme) */
+--bg:#ffffff;--surface:#f8f7fb;--text:#16131f;--muted:#6b7280;--border:#e5e7eb;
+--primary-text:#8536e7;--success-text:#0f7a37;--warning-text:#8a6100;--error-text:#d41976;--info-text:#0369a1;
+/* Fills — label on color (white on fill) */
+--fill-primary:#8536e7;--fill-destructive:#d41976;--on-fill:#ffffff;
+/* Notification count — web base.css (.notification-count uses --color-error) */
+--badge-bg:var(--brand-error);
+/* Tinted fills — web base.css (.badge-*, .message-*): brand color at 10% bg / 30% border */
+--tint-success-bg:rgb(114 227 125 / 10%);--tint-success-border:rgb(114 227 125 / 30%);
+--tint-error-bg:rgb(212 25 118 / 10%);--tint-error-border:rgb(212 25 118 / 30%);
+--tint-warning-bg:rgb(234 179 8 / 10%);--tint-warning-border:rgb(234 179 8 / 30%);
+--tint-info-bg:rgb(14 165 233 / 10%);--tint-info-border:rgb(14 165 233 / 30%);
+/* Web-only extras (not in PDFs) */
+--surface-warm:#faf8f5;--backdrop:rgb(0 0 0 / 50%);
+/* colorForName palette (sum of char codes % 6) */
+--avatar-0:#b275ff;--avatar-1:#0ea5e9;--avatar-2:#72e37d;--avatar-3:#eab308;--avatar-4:#d41976;--avatar-5:#0a1e5f;
+/* Semantic aliases */
+--surface-page:var(--bg);--surface-card:var(--surface);--border-card:var(--border);
+--text-body:var(--text);--text-muted:var(--muted);--text-link:var(--primary-text);
+--money-positive:var(--success-text);--money-negative:var(--error-text);--money-neutral:var(--muted);
+}
+[data-theme="dark"]{
+--bg:#0b0f1a;--surface:#141a2e;--text:#f5f5f7;--muted:#9aa0ac;--border:#262c3d;
+--primary-text:#b275ff;--success-text:#72e37d;--warning-text:#eab308;--error-text:#f472b6;--info-text:#0ea5e9;
+}

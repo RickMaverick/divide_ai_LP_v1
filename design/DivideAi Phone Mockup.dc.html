@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/divideae-design-system-6b57406a-44f7-4a2a-bab3-da277f9315fc/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/divideae-design-system-6b57406a-44f7-4a2a-bab3-da277f9315fc/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/divideae-design-system-6b57406a-44f7-4a2a-bab3-da277f9315fc/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/divideae-design-system-6b57406a-44f7-4a2a-bab3-da277f9315fc/tokens/base.css">
+  <link rel="stylesheet" href="_ds/divideae-design-system-6b57406a-44f7-4a2a-bab3-da277f9315fc/styles.css">
+  <script src="_ds/divideae-design-system-6b57406a-44f7-4a2a-bab3-da277f9315fc/_ds_bundle.js"></script>
+  <style>html,body{margin:0;padding:0}body{font-family:var(--font-sans)}a{color:var(--primary-text)}a:hover{color:var(--brand-primary-hover)}</style>
+</helmet>
+
+<div data-screen-label="Mockup" style="width:1200px;height:1200px;background:{{ bg }};position:relative;overflow:hidden;font-family:var(--font-sans);perspective:2400px">
+
+  <div style="position:absolute;left:330px;top:1030px;width:560px;height:70px;border-radius:50%;background:radial-gradient(closest-side,rgba(10,30,95,.32),rgba(10,30,95,0));filter:blur(14px);transform:rotate(-6deg)"></div>
+
+  <div style="position:absolute;left:50%;top:50%;width:430px;height:900px;margin:-470px 0 0 -215px;transform-style:preserve-3d;transform:rotateX(14deg) rotateY(-24deg) rotateZ(-14deg)">
+
+    <div style="position:absolute;inset:0;border-radius:72px;background:#8536e7;transform:translateZ(-18px)"></div>
+    <div style="position:absolute;inset:0;border-radius:72px;background:#7a2fd6;transform:translateZ(-12px)"></div>
+    <div style="position:absolute;inset:0;border-radius:72px;background:#8f45ee;transform:translateZ(-6px)"></div>
+    <div style="position:absolute;left:-7px;top:190px;width:8px;height:44px;border-radius:4px;background:#7a2fd6;transform:translateZ(-9px)"></div>
+    <div style="position:absolute;left:-7px;top:260px;width:8px;height:78px;border-radius:4px;background:#7a2fd6;transform:translateZ(-9px)"></div>
+    <div style="position:absolute;left:-7px;top:352px;width:8px;height:78px;border-radius:4px;background:#7a2fd6;transform:translateZ(-9px)"></div>
+
+    <div style="position:absolute;inset:0;border-radius:72px;background:#b275ff;padding:6px;box-sizing:border-box">
+      <div style="width:100%;height:100%;border-radius:66px;background:#0b0f1a;padding:14px;box-sizing:border-box">
+        <div data-theme="{{ screenTheme }}" style="position:relative;width:100%;height:100%;border-radius:54px;overflow:hidden;background:var(--bg);color:var(--text);display:flex;flex-direction:column">
+
+          <div style="height:54px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:0 34px;font-size:16px;font-weight:700;position:relative">
+            <span>9:41</span>
+            <div style="position:absolute;left:50%;top:12px;width:118px;height:34px;margin-left:-59px;border-radius:9999px;background:#000000"></div>
+            <div style="display:flex;gap:6px;align-items:center">
+              <div style="display:flex;gap:2px;align-items:flex-end"><span style="width:3px;height:5px;background:currentColor;border-radius:1px"></span><span style="width:3px;height:7px;background:currentColor;border-radius:1px"></span><span style="width:3px;height:9px;background:currentColor;border-radius:1px"></span><span style="width:3px;height:11px;background:currentColor;border-radius:1px"></span></div>
+              <div style="width:24px;height:11px;border:1.5px solid currentColor;border-radius:4px;padding:1.5px;box-sizing:border-box;opacity:.9"><div style="width:75%;height:100%;background:currentColor;border-radius:1.5px"></div></div>
+            </div>
+          </div>
+
+          <div style="flex:1;padding:12px 16px 0;display:flex;flex-direction:column;gap:16px;overflow:hidden">
+            <div style="font:var(--type-greeting)">Olá, Ana</div>
+            <x-import component-from-global-scope="DivideAeDesignSystem_6b5740.TotalsCards" receivable-cents="{{ rec }}" owed-cents="{{ owed }}" show-balance="{{ true }}" hint-size="100%,170px"></x-import>
+            <div style="display:flex;justify-content:space-between;align-items:baseline"><span style="font:var(--type-section)">Seus grupos</span><span style="font-size:14px;font-weight:500;color:var(--primary-text)">Ver todos</span></div>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <x-import component-from-global-scope="DivideAeDesignSystem_6b5740.GroupRow" name="Trip Floripa" type="Viagem" member-count="{{ five }}" balance-cents="{{ g1 }}" hint-size="100%,68px"></x-import>
+              <x-import component-from-global-scope="DivideAeDesignSystem_6b5740.GroupRow" name="Apê da Augusta" type="Casa" member-count="{{ three }}" balance-cents="{{ g2 }}" hint-size="100%,68px"></x-import>
+              <x-import component-from-global-scope="DivideAeDesignSystem_6b5740.GroupRow" name="Churras de sábado" type="Viagem" member-count="{{ eight }}" balance-cents="{{ g3 }}" hint-size="100%,68px"></x-import>
+            </div>
+          </div>
+
+          <div style="position:absolute;right:16px;bottom:104px">
+            <x-import component-from-global-scope="DivideAeDesignSystem_6b5740.Fab" label="Nova despesa" hint-size="160px,52px"></x-import>
+          </div>
+          <div style="flex:none">
+            <x-import component-from-global-scope="DivideAeDesignSystem_6b5740.TabBar" active="inicio" badges="{{ badges }}" hint-size="100%,64px"></x-import>
+            <div style="height:28px;background:var(--surface);display:flex;justify-content:center;align-items:center"><div style="width:130px;height:5px;border-radius:9999px;background:var(--text)"></div></div>
+          </div>
+
+          <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(125deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 38%)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:1200},&quot;background&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;claro&quot;,&quot;roxo&quot;,&quot;azul&quot;],&quot;default&quot;:&quot;claro&quot;,&quot;tsType&quot;:&quot;'claro'|'roxo'|'azul'&quot;},&quot;screenTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;light&quot;,&quot;dark&quot;],&quot;default&quot;:&quot;light&quot;,&quot;tsType&quot;:&quot;'light'|'dark'&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const bg = { claro: '#f2f1f6', roxo: '#b275ff', azul: '#0a1e5f', transparente: 'transparent' }[this.props.background ?? 'claro'] || '#f2f1f6';
+    return {
+      bg, screenTheme: this.props.screenTheme ?? 'light',
+      rec: 128450, owed: 31200, five: 5, three: 3, eight: 8,
+      g1: 97240, g2: -31200, g3: 0, badges: { avisos: 2 }
+    };
+  }
+}
+</script>
+</body>
+</html>

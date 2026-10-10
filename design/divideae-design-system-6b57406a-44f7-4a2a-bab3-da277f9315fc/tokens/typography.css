@@ -1,0 +1,18 @@
+/* No brand webfont in V1 — the device font (SF Pro on iOS, Roboto on Android). */
+:root{
+--font-sans:-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Segoe UI","Helvetica Neue",Arial,sans-serif;
+--fs-xs:12px;--fs-sm:14px;--fs-base:16px;--fs-lg:18px;--fs-xl:20px;--fs-2xl:24px;--fs-3xl:30px;--fs-4xl:36px;--fs-5xl:48px;
+--fw-light:300; /* @kind font */
+--fw-regular:400; /* @kind font */
+--fw-medium:500; /* @kind font */
+--fw-bold:700; /* @kind font */
+/* Semantic */
+--type-cover-initial:var(--fw-bold) var(--fs-5xl)/1 var(--font-sans);
+--type-group-name:var(--fw-bold) var(--fs-2xl)/1.25 var(--font-sans);
+--type-greeting:var(--fw-bold) var(--fs-xl)/1.3 var(--font-sans);
+--type-section:var(--fw-bold) var(--fs-lg)/1.35 var(--font-sans);
+--type-row-title:var(--fw-medium) var(--fs-base)/1.35 var(--font-sans);
+--type-label:var(--fw-medium) var(--fs-sm)/1.4 var(--font-sans);
+--type-body-sm:var(--fw-regular) var(--fs-sm)/1.45 var(--font-sans);
+--type-caption:var(--fw-regular) var(--fs-xs)/1.35 var(--font-sans);
+}
